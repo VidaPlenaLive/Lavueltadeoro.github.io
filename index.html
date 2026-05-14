@@ -316,7 +316,7 @@
 
         function selectRaffle(id) {
             const raffle = PREMIOS.find(r => r.id === id);
-            if (!raffle || raffle.estado === 'sold out') return;
+            if (!raffle || raffle.estado === 'sold out' ||raffle.estado === 'Coming Soon') return;
             
             state.selectedRaffle = raffle;
             state.quantity = 1;
