@@ -265,10 +265,9 @@
 
     <script>
         const PREMIOS = [
-            { id: 'mama', titulo: 'Oro para Mamá', descripcion: 'Cadena con dije especial de 14k.', precio: 350, imagen: '✨', estado: 'sold out', color: 'from-gray-400 to-gray-600' },
+            { id: 'mama', titulo: 'Guillo coqueto', descripcion: 'Pulsera tejido cubano premium.', precio: 200, imagen: '⛓️', estado: 'activo', color: 'from-red-500 to-red-700'  },
             { id: 'anillo', titulo: 'Anillo de Graduación', descripcion: 'Anillo personalizado en oro de 14k.', precio: 500, imagen: '🎓', estado: 'Coming Soon', color: 'from-blue-500 to-indigo-600' },
-            { id: 'papa', titulo: 'Cubana pa papá', descripcion: 'Pulsera tejido cubano premium.', precio: 400, imagen: '⛓️', estado: 'activo', color: 'from-amber-500 to-orange-600' },
-            { id: 'guillo', titulo: 'Guillo coqueto', descripcion: 'Pulsera tejido cubano premium.', precio: 200, imagen: '⛓️', estado: 'activo', color: 'from-red-500 to-red-700' }
+            { id: 'papa', titulo: 'Cubana pa papá', descripcion: 'Pulsera tejido cubano premium.', precio: 400, imagen: '⛓️', estado: 'activo', color: 'from-amber-500 to-orange-600' }
         ];
         ];
 
@@ -316,7 +315,7 @@
 
         function selectRaffle(id) {
             const raffle = PREMIOS.find(r => r.id === id);
-            if (!raffle || raffle.estado === 'sold out' ||raffle.estado === 'Coming Soon') return;
+            if (!raffle || raffle.estado === 'sold out' ) return;
             
             state.selectedRaffle = raffle;
             state.quantity = 1;
